@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/kikd"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="KI / KD" />
+        <item
+            android:id="@+id/pengertiancitra"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Pengertian Citra Bitmap" />
+        <item
+            android:id="@+id/ciricitra"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Ciri-ciri Citra Bitmap" />
+        <item
+            android:id="@+id/pengertian"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Aplikasi Citra Bitmap" />
+    </group>
+
+    <item android:title="Uji Nyali">
+        <menu>
+            <item
+                android:id="@+id/evaluasi"
+                android:icon="@drawable/ic_warning_black_24dp"
+                android:title="Tantangan" />
+        </menu>
+    </item>
+
+</menu>

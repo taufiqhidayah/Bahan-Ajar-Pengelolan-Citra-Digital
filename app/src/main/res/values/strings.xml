@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pengolahan Citra Digital</string>
+    <string name="title_activity_citra_bitmap">Citra Bitmap</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Home</string>
+    <string name="materi1">Citra Bitmap</string>
+    <string name="materi2">Penggabungan Gambar Bitmap</string>
+    <string name="materi3">Pemberian Efek Gambar Bitmap</string>
+    <string name="fitur">Fitur Tambahan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
