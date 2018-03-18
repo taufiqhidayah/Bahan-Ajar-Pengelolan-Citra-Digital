@@ -7,6 +7,7 @@ import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.view.menu.MenuView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -35,9 +36,12 @@ public class CitraBitmap extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citra_bitmap);
         Intent a = getIntent();
-        ubahTitle = findViewById(R.id.navTitle);
-        ubahGambar = findViewById(R.id.navImage);
 
+        ubahGambar = findViewById(R.id.navImage);
+        NavigationView navigationView =(NavigationView)findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        View menuView = navigationView.getHeaderView(0);
+        ubahTitle = menuView.findViewById(R.id.navTitle);
         getMenu = a.getStringExtra(KEYMENU1);
         NavigationView na = (NavigationView) findViewById(R.id.nav_view);
 
@@ -99,8 +103,8 @@ public class CitraBitmap extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -143,11 +147,11 @@ public class CitraBitmap extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.kikd) {
+        if (id == R.id.kikdCitra) {
 
-        } else if (id == R.id.pengertian) {
+        } else if (id == R.id.pengertiancitra) {
 
-        } else if (id == R.id.evaluasi) {
+        } else if (id == R.id.evaluasiCitra) {
 
         }
 
