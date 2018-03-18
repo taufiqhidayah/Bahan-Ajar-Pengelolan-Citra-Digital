@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/citra">
         <item
-            android:id="@+id/kikd"
+            android:id="@+id/kikdCitra"
             android:icon="@drawable/ic_book_black_24dp"
             android:title="KI / KD" />
         <item
@@ -17,15 +18,69 @@
             android:icon="@drawable/ic_filter_frames_black_24dp"
             android:title="Ciri-ciri Citra Bitmap" />
         <item
-            android:id="@+id/pengertian"
+            android:id="@+id/aplikasiCitra"
             android:icon="@drawable/ic_filter_frames_black_24dp"
             android:title="Aplikasi Citra Bitmap" />
     </group>
 
-    <item android:title="Uji Nyali">
+    <item android:title="Uji Nyali"
+        android:id="@id/citra">
         <menu>
             <item
-                android:id="@+id/evaluasi"
+                android:id="@+id/evaluasiCitra"
+                android:icon="@drawable/ic_warning_black_24dp"
+                android:title="Tantangan" />
+        </menu>
+    </item>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/gabung">
+        <item
+            android:id="@+id/kikdGabung"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="KI / KD" />
+        <item
+            android:id="@+id/prinsipgabung"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="prinsip Penggabungan Gambar Bitmap" />
+        <item
+            android:id="@+id/prosesgabung"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Proses Penggabungan Gambar Bitmap" />
+    </group>
+
+    <item android:title="Uji Nyali"
+        android:id="@id/gabung">
+        <menu>
+            <item
+                android:id="@+id/evaluasiGabung"
+                android:icon="@drawable/ic_warning_black_24dp"
+                android:title="Tantangan" />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/efek">
+        <item
+            android:id="@+id/kikdEfek"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="KI / KD" />
+        <item
+            android:id="@+id/jenisEfek"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Jenis Efek Gambar Bitmap" />
+        <item
+            android:id="@+id/pembuatanEfek"
+            android:icon="@drawable/ic_filter_frames_black_24dp"
+            android:title="Pembuatan Efek Gambar Bitmap" />
+    </group>
+
+    <item android:title="Uji Nyali"
+        android:id="@id/gabung">
+        <menu>
+            <item
+                android:id="@+id/evaluasiEfek"
                 android:icon="@drawable/ic_warning_black_24dp"
                 android:title="Tantangan" />
         </menu>

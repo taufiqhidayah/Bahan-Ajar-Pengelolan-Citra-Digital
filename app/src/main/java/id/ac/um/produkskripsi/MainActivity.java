@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         materi3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                temp = new Intent(getApplicationContext(),CitraBitmap.class);
+                temp= new Intent(MainActivity.this, CitraBitmap.class);
+                    temp.putExtra(CitraBitmap.KEYMENU1,c);
                 startActivity(temp);
 
             }
