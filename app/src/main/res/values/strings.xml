@@ -11,6 +11,39 @@
     <string name="materi3">Pemberian Efek Gambar Bitmap</string>
     <string name="fitur">Fitur Tambahan</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeCitra"><b>Selamat Datang di panel Citra Bitmap</b>, disini kalian akan mengeksplore tentang
+        materi Pengantar Citra Bitmap, mulai dari Pengertian Citra Bitmap hingga Aplikasi apa saja yang digunakan
+        dalam Citra Bitmap.\n
+        Silahkan Pilih menu yang telah disediakan disamping.
+    </string>
+    <string name="homeGabung"><b>Selamat Datang di panel Penggabungan Gambar Bitmap</b>, disini kalian akan mengeksplore tentang
+        materi lanjutan yaitu prinsip-prinsip yang ada dalam penggabungan gambar bitmap hingga proses penggabungan gambar bitmap.\n
+        Silahkan Pilih menu yang telah disediakan disamping.
+    </string>
+    <string name="homeEfek"><b>Selamat Datang di panel Pemberian Efek Gambar Bitmap</b>, disini kalian akan mengeksplore tentang
+        materi lanjutan yaitu jenis-jenis efek pada gambar bitmap hingga proses pemberian efek pada gambar bitmap.\n
+        Silahkan Pilih menu yang telah disediakan disamping.</string>
+    <string name="tujuanCitra">
+        > Siswa dapat mengamati pelbagai citra bitmap.
+        \n> Siswa dapat mendiskusikan pengertian citra bitmap, ciri-ciri citra bitmap dan aplikasi pengolah citra bitmap.
+        \n> Siswa dapat mengeksplorasi pengertian citra bitmap, ciri-ciri citra bitmap dan aplikasi pengolah citra bitmap.
+        \n> Siswa dapat membuat kesimpulan tentang citra bitmap.
+        \n> Siswa mampu menyampaikan hasil tentang citra bitmap.
+    </string>
+
+    <string name="tujuanGabung">
+        > Siswa dapat mengamati pelbagai gambar bitmap.
+        \n> Siswa dapat mendiskusikan prinsip dan proses penggabungan gambar bitmap.
+        \n> Siswa dapat mengeksplorasi prinsip dan proses penggabungan gambar bitmap.
+        \n> Siswa dapat membuat kesimpulan tentang gambar bitmap.
+        \n> Siswa dapat menyampaikan hasil tentang gambar bitmap.
+    </string>
+    <string name="tujuanEfek">
+        > Siswa dapat mengamati gambar bitmap.
+        \n> Siswa dapat mendiskusikan jenis – jenis efek dan proses pemberian efek pada gambar bitmap.
+        \n> Siswa dapat mengeksplorasi jenis – jenis efek dan proses pemberian pada gambar bitmap.
+        \n> Siswa dapat membuat kesimpulan proses pemberian efek pada gambar bitmap.
+        \n> Siswa dapat menyampaikan hasil tentang proses pemberian efek pada gambar bitmap.
+    </string>
+
 </resources>
