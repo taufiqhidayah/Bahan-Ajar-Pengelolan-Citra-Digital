@@ -23,7 +23,17 @@
         <activity
             android:name=".CitraBitmap"
             android:label="@string/title_activity_citra_bitmap"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".materi.KIKD"
+            android:label="@string/title_activity_kikd"
+            android:parentActivityName=".CitraBitmap"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="id.ac.um.produkskripsi.CitraBitmap" />
+        </activity>
+        <activity android:name=".materi.ProsesGabung"></activity>
     </application>
 
 </manifest>

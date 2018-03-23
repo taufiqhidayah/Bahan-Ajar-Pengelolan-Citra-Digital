@@ -17,11 +17,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import id.ac.um.produkskripsi.materi.CitraFragment;
-import id.ac.um.produkskripsi.materi.CitraKIKD;
 import id.ac.um.produkskripsi.materi.EfekFragment;
 import id.ac.um.produkskripsi.materi.EfekKIKD;
 import id.ac.um.produkskripsi.materi.GabungFragment;
 import id.ac.um.produkskripsi.materi.GabungKIKD;
+import id.ac.um.produkskripsi.materi.KIKD;
 
 public class CitraBitmap extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -161,10 +161,8 @@ public class CitraBitmap extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.kikdCitra) {
-            CitraKIKD fragment = new CitraKIKD();
-            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.place, fragment);
-            fragmentTransaction.commit();
+            Intent pindah = new Intent(CitraBitmap.this, KIKD.class);
+            startActivity(pindah);
 
         } else if (id == R.id.kikdGabung) {
             GabungKIKD fragment = new GabungKIKD();
@@ -174,6 +172,12 @@ public class CitraBitmap extends AppCompatActivity
 
         } else if (id == R.id.kikdEfek) {
             EfekKIKD fragment = new EfekKIKD();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.prosesgabung) {
+            HomeCB fragment = new HomeCB();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
