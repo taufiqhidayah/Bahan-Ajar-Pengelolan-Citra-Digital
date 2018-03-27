@@ -2,6 +2,7 @@ package id.ac.um.produkskripsi.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,15 +34,13 @@ public class ListAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return DataList.judul.length;
+        return DataList.judulGabung.length;
     }
 
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView mJudul;
         private ImageView mGambar;
-        private Button mLink;
-        Activity activity;
-        LayoutInflater inflater;
+        private CardView mLink;
 
         public ListViewHolder(View itemView){
             super (itemView);
@@ -51,17 +50,12 @@ public class ListAdapter extends RecyclerView.Adapter {
             mLink = itemView.findViewById(R.id.link);
             itemView.setOnClickListener(this);
         }
-//        public ListAdapter (Activity activity){
-//            this.activity =activity;
-//            inflater =(LayoutInflater)activity.getSystemService(activity.LAYOUT_INFLATER_SERVICE);
-//
-//        }
         public void bindView (int position){
-            final String tempJudul = DataList.judul[position];
-            final int tempGambar = DataList.gambar[position];
+            final String tempJudul = DataList.judulGabung[position];
+            final int tempGambar = DataList.gambarGabung[position];
 
-            mJudul.setText(DataList.judul[position]);
-            mGambar.setImageResource(DataList.gambar[position]);
+            mJudul.setText(DataList.judulGabung[position]);
+            mGambar.setImageResource(DataList.gambarGabung[position]);
             mLink.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

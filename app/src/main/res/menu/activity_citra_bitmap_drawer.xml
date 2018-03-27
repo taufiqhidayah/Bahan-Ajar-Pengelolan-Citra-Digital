@@ -6,6 +6,10 @@
     <group android:checkableBehavior="single"
         android:id="@+id/citra">
         <item
+            android:id="@+id/homeCitra"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Beranda" />
+        <item
             android:id="@+id/kikdCitra"
             android:icon="@drawable/ic_book_black_24dp"
             android:title="KI / KD" />
@@ -37,6 +41,10 @@
     <group android:checkableBehavior="single"
         android:id="@+id/gabung">
         <item
+            android:id="@+id/homeGabung"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Beranda" />
+        <item
             android:id="@+id/kikdGabung"
             android:icon="@drawable/ic_book_black_24dp"
             android:title="KI / KD" />
@@ -62,6 +70,10 @@
 
     <group android:checkableBehavior="single"
         android:id="@+id/efek">
+        <item
+            android:id="@+id/homeEfek"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Beranda" />
         <item
             android:id="@+id/kikdEfek"
             android:icon="@drawable/ic_book_black_24dp"
