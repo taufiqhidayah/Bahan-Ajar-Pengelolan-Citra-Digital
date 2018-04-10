@@ -45,7 +45,6 @@
         \n> Siswa dapat membuat kesimpulan proses pemberian efek pada gambar bitmap.
         \n> Siswa dapat menyampaikan hasil tentang proses pemberian efek pada gambar bitmap.
     </string>
-    <string name="title_activity_kikd2">KIKDActivity2</string>
     <string name="title_activity_kikd">KIKD</string>
 
     <string-array name="bit">
@@ -55,5 +54,7 @@
         <item>16</item>
         <item>24</item>
     </string-array>
+
+    <string name="ps"></string>
 
 </resources>

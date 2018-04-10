@@ -22,6 +22,8 @@ import id.ac.um.produkskripsi.materi.EfekFragment;
 import id.ac.um.produkskripsi.materi.EfekKIKD;
 import id.ac.um.produkskripsi.materi.GabungFragment;
 import id.ac.um.produkskripsi.materi.GabungKIKD;
+import id.ac.um.produkskripsi.materiActivity.AplikasiBitmap;
+import id.ac.um.produkskripsi.materiActivity.CiriBitmap;
 import id.ac.um.produkskripsi.materiActivity.HomeCB;
 import id.ac.um.produkskripsi.materiActivity.PengertianCitra;
 
@@ -187,15 +189,23 @@ public class CitraBitmap extends AppCompatActivity
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.pengertiancitra) {
-            temp= new Intent(CitraBitmap.this, PengertianCitra.class);
-            startActivity(temp);
-
         } else if (id == R.id.kikdCitra) {
             CitraKIKD fragment = new CitraKIKD();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+
+        } else if (id == R.id.pengertiancitra) {
+            temp= new Intent(CitraBitmap.this, PengertianCitra.class);
+            startActivity(temp);
+
+        } else if (id == R.id.ciricitra) {
+            temp= new Intent(CitraBitmap.this, CiriBitmap.class);
+            startActivity(temp);
+
+        }else if (id == R.id.aplikasiCitra) {
+            temp= new Intent(CitraBitmap.this, AplikasiBitmap.class);
+            startActivity(temp);
 
         } else if (id == R.id.kikdGabung) {
             GabungKIKD fragment = new GabungKIKD();

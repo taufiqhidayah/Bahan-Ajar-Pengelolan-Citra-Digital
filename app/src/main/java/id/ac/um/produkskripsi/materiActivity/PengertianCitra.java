@@ -19,7 +19,10 @@ public class PengertianCitra extends AppCompatActivity {
     RadioGroup radioGroup;
     TextView bitwarna, ekstensi;
 
-    @SuppressLint("WrongViewCast")
+    private RadioGroup mFirstGroup;
+    private RadioGroup mSecondGroup;
+    private boolean isChecking = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,9 @@ public class PengertianCitra extends AppCompatActivity {
         bitwarna = findViewById(R.id.bitw);
         ekstensi = findViewById(R.id.ekstensi);
         radioGroup = findViewById(R.id.eks);
+        mFirstGroup = findViewById(R.id.eks);
+        mSecondGroup = findViewById(R.id.eks2);
+
         jmlbit = getResources().getStringArray(R.array.bit);
         bit.setPrompt("Pilih jumlah bit");
         bit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -42,6 +48,28 @@ public class PengertianCitra extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
                 bitwarna.setText("Pilih Jumlah Bit");
 
+            }
+        });
+
+        mFirstGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mSecondGroup.clearCheck();
+                }
+                isChecking = true;
+            }
+        });
+
+        mSecondGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mFirstGroup.clearCheck();
+                }
+                isChecking = true;
             }
         });
     }

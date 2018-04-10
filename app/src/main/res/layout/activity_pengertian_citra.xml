@@ -148,7 +148,7 @@ Hal ini menyebabkan semakin halus citra grafis, tetapi kapasitas filenya semakin
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@id/eks"
+                android:id="@+id/eks2"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
                 <RadioButton
