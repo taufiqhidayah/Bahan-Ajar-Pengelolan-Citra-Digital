@@ -1,0 +1,134 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.ac.um.produkskripsi.materi.submateri.LayerFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="LAYER"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_marginBottom="7dp"
+                android:text="      Pengertian Layer adalah lapisan yang berfungsi
+sebagai tempat objek, bisa diibaratkan sebagai kanvas atau lapisan atau sebuah
+element yang ada pada aplikasi photoshop yang digunakan untuk menggabungkan beberapa
+gambar menjadi satu gambar. Layer sangat penting dalam pembuatan sebuah desain, jika kita
+ingin menambahkan atau membuat sebuah desain. Anda juga dapat mengatur komposisi layers
+dengan cara mengubah atribut dan urutan layers. Artinya beberapa gambar tersebut ditumpuk
+atau disatukan sehingga akan terlihat menjadi sebuah objek atau gambar
+\n\nDengan adanya Layers, memungkinkan Anda untuk mengedit sebuah objek tanpa mengganggu
+objek yang lain Sebagai contoh, jika Anda sedang mengedit gambar A maka gambar B tidak akan
+terpengaruh."/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingBottom="7dp">
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/layer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dengan adanya Layers, memungkinkan Anda untuk mengedit sebuah objek tanpa mengganggu
+objek yang lain Sebagai contoh, jika Anda sedang mengedit gambar A maka gambar B tidak akan
+terpengaruh."/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. LINK \n
+Digunakan untuk membuat agar bisa mengelompokkan banyak layer sekaligus. Cara memakainya
+dengan memilih nama-nama layer yang diinginkan (dengan Shift + Klik), kemudian klik icon ini.
+\n\n2. LAYER STYLE\n
+Digunakan untuk membuat layer yang berfungsi seperti menu Layer > Layer style.
+\n\n3. Add Layer Mask\n
+Digunakan untuk menutup/melindungi sebagian/seluruh lapisan gambar dari proses pengeditan
+\n\n4. New Adjustment Layer\n
+Digunakan untuk membuat layer yang berfungsi sebagai pengubahan warna. Perbedaannya kalau
+menggunakan menu Image > Adjustment bisa dibaca artikel tutorial yang ini.
+\n\n5. Layer Group\n
+Digunakan untuk mengelompokkan beberapa layer menjadi suatu kumpulan layer, agar
+mempermudah proses pekerjaan yang menggunakan banyak sekali layer.
+\n\n6. New Layer\n
+Digunakan untuk membuat layer baru yang kosong, ataupun untuk membuat duplikat layer. Untuk
+membuat duplikat layer, lakukan dengan cara menggeser nama layer ke icon ini.
+\n\n7. Delete Layer\n
+Digunakan untuk menghapus layer. Aktifkan layer yang ingin dihapus, kemudian klik icon ini.
+Dalam Photoshop versi CS2, bisa juga dilakukan hanya dengan mengaktifkan layer kemudian tekan tombol Delete pada keyboard (ini belum bisa dilakukan jika Anda menggunakan Photoshop
+versi sebelumnya).
+\n\n8. Layer Blending Option\n
+Digunakan untuk mengatur proses yang terjadi pada pixel-pixel layer terhadap layer yang ada
+posisinya berada dibawahnya.
+\n\n9. Image Adjustment Layer\n
+Ini menunjukkan sebuah gambar layer yang merupakan pengaturan warna.
+\n\n10. Layer Thumbnail\n
+Ini adalah tampilan gambar kecil dari gambar asli Anda. Jika layer merupakan sebuah tulisan atau
+text, maka gambar tampilannya adalah sebuah huruf T.
+\n\n11. Eye Ball / Visibility\n
+Digunakan untuk mengatur tentang tampil atau tidaknya sebuah layer yang sedang Anda kerjakan
+dengan Photoshop. Cara pakainya, dengan melakukan klik pada icon tersebut.
+\n\n12. Palette Menu\n
+Icon ini digunakan untuk menampilkan pilihan menu palet. Menu palet ini berhubungan dengan
+fungsi palet yang sedang Anda tampilkan.
+\n\n13. Opacity\n
+Digunakan untuk mengatur tingkat transparansi layer. Semakin kecil nilai prosentasenya, maka
+layer/gambar Anda akan semakin transparan.
+\n\n14. Fill Opacity\n
+Digunakan untuk mengatur tingkat transparansi layer. Namun tidak sama dengan Opacity, karena
+Fill ini tidak mengatur bagian yang merupakan Layer Style. Jadi pilihan Fill ini akan bermanfaat jika
+Anda juga menerapkan Layer Style.
+\n\n15. Layer Style option\n
+Gambar icon F pada layer ini menunjukkan bahwa pada layer ini terdapat efek Layer Style,
+sementara gambar segitiga di sebelah kanan ini digunakan untuk menampilkan atau tidaknya
+informasi detil Layer Style yang digunakan.
+\n\n16. Locked layer\n
+Gambar icon gembok (maksudnya kunci) ini menunjukkan bahwa layer ini dalam kondisi terkunci.
+"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sumber: kuliahdesain.com"
+                android:textSize="10sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/lihatvideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lihat video layer"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>

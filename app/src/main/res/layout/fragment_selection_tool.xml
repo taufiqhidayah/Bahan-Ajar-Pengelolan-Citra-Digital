@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.ac.um.produkskripsi.materi.submateri.SelectionToolFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="7dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="SELECTION TOOL"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="      Teknik seleksi adalah teknik dasar yang paling utama untuk melakukan melakukan manipulasi pada suatu gambar. Dengan melakukan seleksi, akan
+terjadi isolasi pada gambar tersebut, sehingga area gambar yang terseleksi bisa dimanipulasi dengan tidak mempengaruhi area di luarnya. Misalnya, mengubah
+warna mata yang berwarna hitam menjadi berwarna biru, terlebih dulu dilakukan seleksi bagian mata saja pada area wajah, lalu berilah warna yang diinginkan
+pada area mata yang sudah terseleksi. Tanda dari bidang yang diseleksi adalah dibatasi oleh garis putus putus yang berkedip-kedip.
+\n\nMacam-macam Selection Tool dalam photoshop:"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:id="@+id/gridView"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/viewVideo"
+        android:layout_height="wrap_content"
+        android:text="Lihat Video Selection Tool"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>

@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.ac.um.produkskripsi">
 
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,10 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CitraBitmap"
             android:label="@string/title_activity_citra_bitmap"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".materi.KIKD"
@@ -34,11 +42,8 @@
                 android:value="id.ac.um.produkskripsi.CitraBitmap" />
         </activity>
         <activity android:name=".materi.ProsesGabung" />
-        <activity android:name=".materi.VideoTutor" />
-        <activity android:name=".materiActivity.CiriBitmap" />
-        <activity android:name=".materiActivity.AplikasiBitmap" />
-        <activity android:name=".materiActivity.EvaluasiCitra" />
-        <activity android:name=".materiActivity.PengertianCitra"></activity>
+        <activity android:name=".listdata.VideoYoutube"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

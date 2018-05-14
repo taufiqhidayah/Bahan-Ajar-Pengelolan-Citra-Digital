@@ -27,13 +27,11 @@
             android:padding="5dp"
             android:text="Citra bitmap mempunyai ciri-ciri seperti berikut:"/>
 
-        <ImageView
+        <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/imageciri"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:visibility="gone"
-            app:srcCompat="@drawable/logo_um" />
+            android:layout_height="150dp"
+            android:visibility="gone"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -47,63 +45,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Tersusun oleh sebaran titik-titik yang disebut pixel (picture element) beragam warna. \nPixel sendiri tersebar dalam grid. " />
             <RadioButton
                 android:id="@+id/ciri2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Bersifat resolution dependent artinya kualitas gambar tergantung pada resolusi, semakin besar resolusinya gambar yang dihasilkan semakin baik." />
             <RadioButton
                 android:id="@+id/ciri3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Sebuah citra bitmap yang diperbesar melebihi ukuran normalnya akan tampak kasar (pecah-pecah). " />
             <RadioButton
                 android:id="@+id/ciri4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Cocok untuk pembuatan gambar dengan warna yang komplek." />
             <RadioButton
                 android:id="@+id/ciri5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Gradasi warna nyata enak dipandang." />
             <RadioButton
                 android:id="@+id/ciri6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Mampu menyimpan gambar dengan format : JPG, JPEG, BMP, TIFF, PCK, GIF dan PNG. " />
             <RadioButton
                 android:id="@+id/ciri7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Cocok dipakai untuk gambar-gambar dengan efek bayangan (shading) yang halus." />
             <RadioButton
                 android:id="@+id/ciri8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Dapat ditambahkan efek khusus tertentu sehingga dapat membuat objek tampil sesuai keinginan." />
             <RadioButton
                 android:id="@+id/ciri9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:onClick="onRadioButtonClicked"
                 android:text="Space penyimpanan lebih besar. " />
 
         </RadioGroup>

@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.ac.um.produkskripsi.materi.VideoTutor">
+    tools:context="id.ac.um.produkskripsi.listdata.VideoYoutube">
 
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"/>
 </android.support.constraint.ConstraintLayout>

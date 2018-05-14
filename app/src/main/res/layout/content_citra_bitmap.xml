@@ -9,4 +9,12 @@
     tools:context="id.ac.um.produkskripsi.CitraBitmap"
     tools:showIn="@layout/app_bar_citra_bitmap">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </android.support.v4.view.ViewPager>
+
 </android.support.constraint.ConstraintLayout>

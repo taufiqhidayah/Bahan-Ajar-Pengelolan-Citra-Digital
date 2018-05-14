@@ -3,6 +3,9 @@ package id.ac.um.produkskripsi;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,17 +18,20 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import id.ac.um.produkskripsi.adapter.TabsAdapter;
+import id.ac.um.produkskripsi.materi.AplikasiBitmap;
+import id.ac.um.produkskripsi.materi.CiriBitmap;
 import id.ac.um.produkskripsi.materi.CitraFragment;
 import id.ac.um.produkskripsi.materi.CitraKIKD;
 import id.ac.um.produkskripsi.materi.EfekFragment;
 import id.ac.um.produkskripsi.materi.EfekKIKD;
 import id.ac.um.produkskripsi.materi.GabungFragment;
 import id.ac.um.produkskripsi.materi.GabungKIKD;
-import id.ac.um.produkskripsi.materiActivity.AplikasiBitmap;
-import id.ac.um.produkskripsi.materiActivity.CiriBitmap;
-import id.ac.um.produkskripsi.materiActivity.HomeCB;
-import id.ac.um.produkskripsi.materiActivity.PengertianCitra;
+import id.ac.um.produkskripsi.materi.PengertianCitra;
+import id.ac.um.produkskripsi.materi.PrinsipGabung;
+import id.ac.um.produkskripsi.materi.submateri.LayerFragment;
 
 public class CitraBitmap extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,7 +41,8 @@ public class CitraBitmap extends AppCompatActivity
     TextView ubahTitle;
     ImageView ubahGambar;
     LinearLayout bg;
-    Intent temp;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +50,24 @@ public class CitraBitmap extends AppCompatActivity
         setContentView(R.layout.activity_citra_bitmap);
         Intent a = getIntent();
 
-        ubahGambar = findViewById(R.id.navImage);
+
         NavigationView navigationView =(NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View menuView = navigationView.getHeaderView(0);
         getMenu = a.getStringExtra(KEYMENU1);
         NavigationView na = (NavigationView) findViewById(R.id.nav_view);
 
+        ubahGambar = findViewById(R.id.navImage);
         ubahTitle = menuView.findViewById(R.id.navTitle);
         ubahGambar = menuView.findViewById(R.id.navImage);
         bg = menuView.findViewById(R.id.backgroundNav);
+
+        tabLayout = findViewById(R.id.tabs);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+
+        TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(tabsAdapter);
 
         Menu navmenu = na.getMenu();
 //        menyembunyikan menu yang ada
@@ -74,6 +89,7 @@ public class CitraBitmap extends AppCompatActivity
         navmenu.findItem(R.id.kikdEfek).setVisible(false);
         navmenu.findItem(R.id.jenisEfek).setVisible(false);
         navmenu.findItem(R.id.evaluasiEfek).setVisible(false);
+
 
 
         if (getMenu.equals("satu")) {
@@ -132,16 +148,6 @@ public class CitraBitmap extends AppCompatActivity
     }
 
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.citra_bitmap, menu);
@@ -171,64 +177,97 @@ public class CitraBitmap extends AppCompatActivity
 
         int id = item.getItemId();
 
+
         if (id == R.id.homeCitra) {
             CitraFragment fragment = new CitraFragment();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.homeGabung) {
             GabungFragment fragment = new GabungFragment();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.homeEfek) {
             EfekFragment fragment = new EfekFragment();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.kikdCitra) {
             CitraKIKD fragment = new CitraKIKD();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.pengertiancitra) {
-            temp= new Intent(CitraBitmap.this, PengertianCitra.class);
-            startActivity(temp);
+            PengertianCitra fragment = new PengertianCitra();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.ciricitra) {
-            temp= new Intent(CitraBitmap.this, CiriBitmap.class);
-            startActivity(temp);
+            CiriBitmap fragment = new CiriBitmap();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         }else if (id == R.id.aplikasiCitra) {
-            temp= new Intent(CitraBitmap.this, AplikasiBitmap.class);
-            startActivity(temp);
+            AplikasiBitmap fragment = new AplikasiBitmap();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         } else if (id == R.id.kikdGabung) {
             GabungKIKD fragment = new GabungKIKD();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
-        } else if (id == R.id.kikdEfek) {
+        } else if (id == R.id.prinsipgabung) {
+            PrinsipGabung fragment = new PrinsipGabung();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.VISIBLE);
+            viewPager.setVisibility(View.VISIBLE);
+
+        }  else if (id == R.id.kikdEfek) {
             EfekKIKD fragment = new EfekKIKD();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();
-
-        } else if (id == R.id.prosesgabung) {
-            HomeCB fragment = new HomeCB();
-            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.place, fragment);
-            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this,"Silahkan gunakan navigasi yang disediakan", Toast.LENGTH_SHORT).show();
+//        super.onBackPressed();
     }
 }
