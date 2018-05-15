@@ -67,9 +67,9 @@ public class SelectionToolFragment extends Fragment {
 
         gridView = view.findViewById(R.id.gridView);
         ImageAdapter imageAdapter = new ImageAdapter(getActivity(), title, mThumbIds);
-        final TextView title = view.findViewById(R.id.titleGrid);
-        final TextView deskripsi = view.findViewById(R.id.deskripsGrid);
-        final ImageView gambar = view.findViewById(R.id.imageGrid);
+        final TextView titlea = view.findViewById(R.id.titleGrid);
+        final TextView deskripsia = view.findViewById(R.id.deskripsGrid);
+        final ImageView gambara = view.findViewById(R.id.imageGrid);
 
         gridView.setAdapter(imageAdapter);
 
@@ -77,14 +77,14 @@ public class SelectionToolFragment extends Fragment {
                   public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
-                      showDialog();
+                      showDialog(title[position],deskripsi[position]);
             }
         });
 
         return view;
     }
 
-    protected void showDialog(){
+    protected void showDialog(String jdl, String desk){
 
         Dialog dialog = new Dialog(getActivity());
         dialog.setCancelable(true);
@@ -95,6 +95,8 @@ public class SelectionToolFragment extends Fragment {
         TextView title = view.findViewById(R.id.titleGrid);
         TextView deskripsi = view.findViewById(R.id.deskripsGrid);
         ImageView gambar = view.findViewById(R.id.imageGrid);
+        title.setText(jdl);
+        deskripsi.setText(desk);
 
 //
 //        title.setOnClickListener(new View.OnClickListener() {
