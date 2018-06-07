@@ -31,6 +31,7 @@ import id.ac.um.produkskripsi.materi.GabungFragment;
 import id.ac.um.produkskripsi.materi.GabungKIKD;
 import id.ac.um.produkskripsi.materi.PengertianCitra;
 import id.ac.um.produkskripsi.materi.PrinsipGabung;
+import id.ac.um.produkskripsi.materi.submateri.JenisEfek;
 import id.ac.um.produkskripsi.materi.submateri.LayerFragment;
 
 public class CitraBitmap extends AppCompatActivity
@@ -252,6 +253,14 @@ public class CitraBitmap extends AppCompatActivity
 
         }  else if (id == R.id.kikdEfek) {
             EfekKIKD fragment = new EfekKIKD();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
+
+        } else if (id == R.id.jenisEfek) {
+            JenisEfek fragment = new JenisEfek();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.place, fragment);
             fragmentTransaction.commit();

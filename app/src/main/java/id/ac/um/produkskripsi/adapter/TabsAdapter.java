@@ -16,8 +16,8 @@ import id.ac.um.produkskripsi.materi.submateri.TipsPenggabungan;
 
 public class TabsAdapter extends FragmentStatePagerAdapter {
 
-    String[] isi = new String[]{"Prinsip Penggabungan","Layer","Selection Tool", "Tips"};
-    Integer tabnumber = 4;
+    String[] isi = new String[]{"Prinsip Penggabungan","Layer","Selection Tool"};
+    Integer tabnumber = 3;
 
     public TabsAdapter(FragmentManager fm) {
         super(fm);
@@ -41,9 +41,6 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
             case 2:
                 SelectionToolFragment selectionToolFragment = new SelectionToolFragment();
                 return selectionToolFragment;
-            case 3:
-                TipsPenggabungan tipsPenggabungan = new TipsPenggabungan();
-                return tipsPenggabungan;
         }
         return null;
     }

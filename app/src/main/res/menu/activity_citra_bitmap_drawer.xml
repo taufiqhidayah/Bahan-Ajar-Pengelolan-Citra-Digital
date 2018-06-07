@@ -51,7 +51,7 @@
         <item
             android:id="@+id/prinsipgabung"
             android:icon="@drawable/ic_filter_frames_black_24dp"
-            android:title="prinsip Penggabungan Gambar Bitmap" />
+            android:title="Prinsip Penggabungan Gambar Bitmap" />
         <item
             android:id="@+id/prosesgabung"
             android:icon="@drawable/ic_filter_frames_black_24dp"

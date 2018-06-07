@@ -1,13 +1,60 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="id.ac.um.produkskripsi.materi.submateri.PengantarGabung"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="id.ac.um.produkskripsi.materi.submateri.PengantarGabung">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="7dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="PRINSIP PENGGABUNGAN GAMBAR BITMAP"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Penggabungan gambar bitmap mempunyai beberapa prinsip yang harus kita ketahui. \n" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="top">
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_width="60dp"
+                android:padding="10dp"
+                android:layout_height="60dp"
+                android:src="@drawable/layers"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Pertama kita harus memahami tentang Layer. Layer digunakan untuk menggabungkan beberapa gambar menjadi satu gambar, Bisa dikatakan saat mengabungkan gambar satu dengan yang lainya akan terbentuk lebih dari satu layer (multi layer). Artinya beberapa gambar tersebut seakan akan bertumpuk sehingga akan terlihat menjadi sebuah objek atau gambar. Gambar yang berada pada layer atas maka akan berada pada tumpukan yang paling atas dan bisa menutupi tumpukan gambar yang berada dibawahnya.\n"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="top">
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_width="60dp"
+                android:padding="10dp"
+                android:layout_height="60dp"
+                android:src="@drawable/selectiontool"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Kedua kita harus memahami tentang selection tool. dimana selection tool ini merupakan tools yang sering digunakan dalam proses editing gambar utamanya untuk menggabungkan gambar bitmap agar gambar bisa selaras tidak terlihat seperti editan kasar yang asal menempel gambar satu dengan yang lain.\n"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

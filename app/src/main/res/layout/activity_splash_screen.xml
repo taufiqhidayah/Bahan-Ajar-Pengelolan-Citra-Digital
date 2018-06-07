@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Pengolahan Citra Digital \nSemester Genap"
+        android:text="Pengolahan Citra Digital \n ~   BITMAP   ~"
         android:id="@+id/level"
         android:textColor="@android:color/holo_green_light" />
 </LinearLayout>

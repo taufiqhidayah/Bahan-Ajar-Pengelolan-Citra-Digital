@@ -2,12 +2,14 @@ package id.ac.um.produkskripsi.materi.submateri;
 
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 
 import id.ac.um.produkskripsi.R;
 import id.ac.um.produkskripsi.adapter.ImageAdapter;
+import id.ac.um.produkskripsi.listdata.VideoYoutube;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +25,7 @@ import id.ac.um.produkskripsi.adapter.ImageAdapter;
 public class SelectionToolFragment extends Fragment {
 
     GridView gridView;
+    Button youtube;
 
     String[] title = {
             "Rectangular Marquee tool",
@@ -67,24 +71,34 @@ public class SelectionToolFragment extends Fragment {
 
         gridView = view.findViewById(R.id.gridView);
         ImageAdapter imageAdapter = new ImageAdapter(getActivity(), title, mThumbIds);
-        final TextView titlea = view.findViewById(R.id.titleGrid);
-        final TextView deskripsia = view.findViewById(R.id.deskripsGrid);
-        final ImageView gambara = view.findViewById(R.id.imageGrid);
 
         gridView.setAdapter(imageAdapter);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                  public void onItemClick(AdapterView<?> parent, View v,
+            public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
-                      showDialog(title[position],deskripsi[position]);
+                showDialog(title[position], mThumbIds[position], deskripsi[position]);
             }
         });
+
+        youtube = view.findViewById(R.id.viewVideo);
+
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), VideoYoutube.class);
+                intent.putExtra(VideoYoutube.VIDEO_ID,"ODVJ8mjnxBI");
+                getActivity().startActivity(intent);
+
+            }
+        });
+
 
         return view;
     }
 
-    protected void showDialog(String jdl, String desk){
+    protected void showDialog(String jdl, int img, String desk){
 
         Dialog dialog = new Dialog(getActivity());
         dialog.setCancelable(true);
@@ -96,23 +110,9 @@ public class SelectionToolFragment extends Fragment {
         TextView deskripsi = view.findViewById(R.id.deskripsGrid);
         ImageView gambar = view.findViewById(R.id.imageGrid);
         title.setText(jdl);
+        gambar.setImageResource(img);
         deskripsi.setText(desk);
 
-//
-//        title.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //Do something
-//
-//            }
-//        });
-//        deskripsi.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //Do something
-//
-//            }
-//        });
         dialog.show();
     };
 

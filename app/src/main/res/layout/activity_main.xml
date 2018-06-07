@@ -7,11 +7,21 @@
     android:background="#ffffff"
     tools:context="id.ac.um.produkskripsi.MainActivity">
 
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:id="@+id/info"
+        app:srcCompat="@drawable/info"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#ffae00"
+        android:src="@drawable/bg_main"
         android:scaleType="centerCrop"
         android:id="@+id/imageView2" />
 
@@ -89,6 +99,7 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="47dp"
+                            android:id="@+id/iconmenu"
                             android:layout_marginBottom="5dp"
                             app:srcCompat="@drawable/iconcitra" />
                         <TextView
@@ -180,8 +191,9 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:id="@+id/icontambahan"
                             android:layout_marginBottom="5dp"
-                            app:srcCompat="@mipmap/ic_launcher_round" />
+                            app:srcCompat="@drawable/iconreferensi" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -197,3 +209,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+
