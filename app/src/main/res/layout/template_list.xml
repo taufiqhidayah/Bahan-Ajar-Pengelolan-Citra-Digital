@@ -23,7 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Judul Materi"
-                android:padding="7dp"
+                android:padding="10dp"
+                android:textStyle="bold"
                 android:id="@+id/judulMateri"/>
             <ImageView
                 android:layout_width="match_parent"

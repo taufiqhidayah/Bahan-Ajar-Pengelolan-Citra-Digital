@@ -3,6 +3,7 @@ package id.ac.um.produkskripsi;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final MediaPlayer mp = MediaPlayer.create(this,R.raw.btn);
         materi1 = findViewById(R.id.menu1);
         materi2 = findViewById(R.id.menu2);
         materi3 = findViewById(R.id.menu3);
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 showDialog();
             }
         });
@@ -116,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         materi1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 temp = new Intent(MainActivity.this, CitraBitmap.class);
                  temp.putExtra(CitraBitmap.KEYMENU1,a);
                 startActivity(temp);
@@ -125,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         materi2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 temp= new Intent(MainActivity.this, CitraBitmap.class);
                     temp.putExtra(CitraBitmap.KEYMENU1,b);
                 startActivity(temp);
@@ -134,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         materi3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 temp= new Intent(MainActivity.this, CitraBitmap.class);
                     temp.putExtra(CitraBitmap.KEYMENU1,c);
                 startActivity(temp);
@@ -144,11 +150,11 @@ public class MainActivity extends AppCompatActivity {
         fitur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.start();
                 temp= new Intent(MainActivity.this, Referensi.class);
                 startActivity(temp);
             }
         });
-
 
     }
 

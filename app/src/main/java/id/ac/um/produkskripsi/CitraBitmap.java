@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import id.ac.um.produkskripsi.adapter.TabsAdapter;
+import id.ac.um.produkskripsi.kuis.Quiz;
 import id.ac.um.produkskripsi.materi.AplikasiBitmap;
 import id.ac.um.produkskripsi.materi.CiriBitmap;
 import id.ac.um.produkskripsi.materi.CitraFragment;
@@ -31,6 +32,8 @@ import id.ac.um.produkskripsi.materi.GabungFragment;
 import id.ac.um.produkskripsi.materi.GabungKIKD;
 import id.ac.um.produkskripsi.materi.PengertianCitra;
 import id.ac.um.produkskripsi.materi.PrinsipGabung;
+import id.ac.um.produkskripsi.materi.ProsesGabung;
+import id.ac.um.produkskripsi.materi.evaluasi.ShowEval;
 import id.ac.um.produkskripsi.materi.submateri.JenisEfek;
 import id.ac.um.produkskripsi.materi.submateri.LayerFragment;
 
@@ -44,6 +47,8 @@ public class CitraBitmap extends AppCompatActivity
     LinearLayout bg;
     TabLayout tabLayout;
     ViewPager viewPager;
+    Intent temp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -267,6 +272,17 @@ public class CitraBitmap extends AppCompatActivity
             tabLayout.setVisibility(View.GONE);
             viewPager.setVisibility(View.GONE);
 
+        } else if (id == R.id.evaluasiCitra) {
+            ShowEval fragment = new ShowEval();
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.place, fragment);
+            fragmentTransaction.commit();
+            tabLayout.setVisibility(View.GONE);
+            viewPager.setVisibility(View.GONE);
+
+        } else if (id == R.id.prosesgabung) {
+            temp= new Intent(CitraBitmap.this, ProsesGabung.class);
+            startActivity(temp);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -35,17 +35,31 @@
         <activity
             android:name=".materi.KIKD"
             android:label="@string/title_activity_kikd"
+            android:screenOrientation="portrait"
             android:parentActivityName=".CitraBitmap"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="id.ac.um.produkskripsi.CitraBitmap" />
         </activity>
-        <activity android:name=".materi.ProsesGabung" />
+        <activity android:name=".materi.ProsesGabung"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".listdata.VideoYoutube"
             android:screenOrientation="landscape" />
-        <activity android:name=".Referensi"></activity>
+        <activity android:name=".Referensi"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".kuis.Quiz"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".kuis.HighestScore"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".materi.submateri.DetailMateri"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>
